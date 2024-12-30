@@ -1,0 +1,10 @@
+dist
+logs
+node_modules
+tmp
+userdata
+.vscode
+.DS_Store
+__MACOSX
+.desktop
+static/

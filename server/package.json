@@ -1,0 +1,42 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "app.ts",
+  "scripts": {
+    "dev": "nodemon --watch \"./**/*.ts\" --exec ts-node ./app.ts",
+    "build": "tsc",
+    "package": "pkgroll --target node22.30 --env.NODE_ENV=production --minify --clean-dist "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "compression": "^1.7.5",
+    "cors": "^2.8.5",
+    "express-fileupload": "^1.5.1",
+    "express-session": "^1.18.1",
+    "express-validator": "^7.2.0",
+    "fs-extra": "^11.2.0",
+    "morgan": "^1.10.0",
+    "rotating-file-stream": "^3.2.5",
+    "sharp": "^0.33.5",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
+    "uuid": "^11.0.3"
+  },
+  "devDependencies": {
+    "@types/compression": "^1.7.5",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/express-fileupload": "^1.5.1",
+    "@types/express-session": "^1.18.1",
+    "@types/fs-extra": "^11.0.4",
+    "@types/morgan": "^1.9.9",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9",
+    "pkgroll": "^2.5.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}

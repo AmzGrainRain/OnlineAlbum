@@ -1,0 +1,175 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    --button-border-radius: 0.3rem;
+
+    --nav-button-border-radius: 0.4rem;
+    --context-menu-border-radius: 0.4rem;
+    --dialog-border-radius: 0.5rem;
+    --notification-border-radius: 0.5rem;
+    --dialog-button-border-radius: 0.25rem;
+    --category-border-radius: 0.4rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --mask-background-color: #0005;
+
+        --loading-icon-color: #8d98ff;
+
+        --page-background-color: #222;
+
+        --nav-icon-color: #8d98ff;
+        --nav-hover-icon-color: #8d98ff;
+        --nav-text-color: #fff;
+        --nav-background-color: #333;
+        --nav-border-color: #444;
+        --nav-button-hover-icon-color: #fff;
+        --nav-button-border-color: #eee1;
+        --nav-button-hover-border-color: #8d98ff;
+
+        --button-background-color: #333;
+        --button-text-color: #fff;
+        --button-border-color: #444;
+        --button-hover-border-color: #8d98ff;
+
+        --input-background-color: #333;
+        --input-text-color: #fff;
+        --input-border-color: #444;
+        --input-hover-border-color: #8d98ff;
+
+        --photo-card-loading-flash-color: #fffa;
+        --photo-card-loading-border-color: #fff1;
+        --photo-card-overlay-bg-color: #0005;
+        --photo-card-overlay-text-color: #fff;
+
+        --context-menu-bg-color: #333a;
+        --context-menu-text-color: #fff;
+        --context-menu-border-color: #fff1;
+        --context-menu-hover-bg-color: #fff1;
+
+        --dialog-title-background-color: #444;
+        --dialog-background-color: #333;
+        --dialog-button-background-color: #444;
+        --dialog-button-border-color: #555;
+        --dialog-button-hover-border-color: #8d98ff;
+
+        --notification-background-color: #333c;
+
+        --category-table-header-color: #333;
+        --category-table-border-color: #444;
+
+        --scroll-top-button-icon-color: #fff;
+        --scroll-top-button-background-color: #0004;
+        --scroll-top-button-hover-background-color: #0008;
+        --scroll-top-button-border-color: #fff4;
+
+        --category-dialog-background-color: #333;
+        --category-dialog-border-color: #444;
+        --category-dialog-hover-border-color: #8d98ff;
+        --category-dialog-border-radius: .5rem;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --mask-background-color: #0004;
+
+        --loading-icon-color: #8d98ff;
+
+        --page-background-color: #fafafa;
+
+        --nav-icon-color: #8d98ff;
+        --nav-hover-icon-color: #8d98ff;
+        --nav-text-color: #222;
+        --nav-background-color: #fff;
+        --nav-border-color: #0001;
+        --nav-button-hover-icon-color: #fff;
+        --nav-button-border-color: #0002;
+        --nav-button-hover-border-color: #8d98ff;
+
+        --button-background-color: #f3f3f3;
+        --button-text-color: #222;
+        --button-border-color: #0002;
+        --button-hover-border-color: #8d98ff;
+
+        --input-background-color: #f3f3f3;
+        --input-text-color: #222;
+        --input-border-color: #0002;
+        --input-hover-border-color: #8d98ff;
+
+        --photo-card-loading-flash-color: #0005;
+        --photo-card-loading-border-color: #0001;
+        --photo-card-overlay-bg-color: #0005;
+        --photo-card-overlay-text-color: #fff;
+
+        --context-menu-bg-color: #fff8;
+        --context-menu-text-color: #222;
+        --context-menu-border-color: #0001;
+        --context-menu-hover-bg-color: #0001;
+
+        --dialog-title-background-color: #e5e5e5;
+        --dialog-background-color: #eee;
+
+        --notification-background-color: #fffc;
+
+        --category-table-header-color: #eee;
+        --category-table-border-color: #ccc;
+
+        --scroll-top-button-icon-color: #000;
+        --scroll-top-button-background-color: #fffa;
+        --scroll-top-button-hover-background-color: #fff;
+        --scroll-top-button-border-color: #0003;
+
+        --category-dialog-background-color: #fff;
+        --category-dialog-border-color: #ddd;
+        --category-dialog-hover-border-color: #8d98ff;
+        --category-dialog-border-radius: .5rem;
+    }
+}
+
+body,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+input,
+button,
+textarea,
+select {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.disable {
+    pointer-events: none;
+}
+
+body {
+    background-color: var(--page-background-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    scroll-behavior: smooth;
+}
