@@ -13,35 +13,27 @@ export default defineConfig({
     open: '/',
     cors: true,
     proxy: {
-      // 线路 1
-
+      // API 服务器 - dev
       // '/api': {
-      //   target: 'http://192.168.100.100:8000',
+      //   target: 'http://localhost:8000',
       //   changeOrigin: true
       // },
+
+      // 图片服务器 - dev
       // '/photos': {
-      //   target: 'http://192.168.100.100:8000',
+      //   target: 'http://localhost:8000',
       //   changeOrigin: true
       // },
 
-      // 线路 2
-
-      // '/api': {
-      //   target: 'http://192.168.100.101:8000',
-      //   changeOrigin: true
-      // },
-      // '/photos': {
-      //   target: 'http://192.168.100.101:8000',
-      //   changeOrigin: true
-      // }
-
-      // 本地开发
+      // API 服务器 - prod
       '/api': {
-        target: 'http://localhost:8000',
+        target: 'http://192.168.100.100:8000',
         changeOrigin: true
       },
+
+      // 图片服务器 - prod
       '/photos': {
-        target: 'http://localhost:8000',
+        target: 'http://192.168.100.100:8000',
         changeOrigin: true
       }
     }

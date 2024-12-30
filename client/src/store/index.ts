@@ -5,7 +5,7 @@ const useStore = defineStore('global', {
         page: {
             current: 1,
             total: 1,
-            limit: 210
+            limit: 147
         },
         currentCategory: 0,
         containerElement: null as HTMLElement | null,
@@ -17,7 +17,7 @@ const useStore = defineStore('global', {
         $Init() {
             this.page.current = 1
             this.page.total = 1
-            this.page.limit = 210
+            this.page.limit = 147
             this.loading = false
         },
 

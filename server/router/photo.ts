@@ -30,7 +30,6 @@ const PhotoRouter = (): Router => {
             await fs.ensureDir(photoDir)
             await fs.ensureDir(thumbnailDir)
 
-            await db.run('BEGIN TRANSACTION')
             const uploaded: string[] = []
             for (const photo of Array.isArray(photos) ? photos : [photos]) {
                 const fileName = GenerateUniqueString() + path.extname(photo.name)
@@ -62,21 +61,19 @@ const PhotoRouter = (): Router => {
 
                     uploaded.push(fileName)
                 } catch (error) {
+                    console.error(error)
                     await fs.remove(filePath)
                     await fs.remove(thumbnailPath)
-                    throw error
+                    await db.run('DELETE FROM photos WHERE file_name = ?', fileName)
                 }
             }
 
-            await db.run('COMMIT')
             SendResponse(res, {
                 success: true,
                 message: 'All files uploaded successfully',
                 data: uploaded
             })
         } catch (error) {
-            if (db) await db.run('ROLLBACK')
-
             console.error(error)
             SendResponse(res, {
                 success: false,
